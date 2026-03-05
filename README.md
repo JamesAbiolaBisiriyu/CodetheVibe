@@ -1,4 +1,4 @@
-## Prism Gallery · Luxe Product Cards
+## Prism Gallery · Luxe Product Cards   http://jfvse.me/CodetheVibe/
 
 Prism Gallery is a small front‑end project that showcases a set of premium tech products using **semantic HTML**, **modern CSS (variables, animations, responsive layout)**, and **vanilla JavaScript** for interactivity. It was built as a checkpoint project to demonstrate core front‑end skills, UI polish, and problem‑solving.
 
