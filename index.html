@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product gallery · semantic + vars</title>
+    <!-- External CSS -->
+    <!-- <link rel="stylesheet" href="styles.css">
+      -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Font (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- page header with navigation (theme toggle) -->
+    <header class="page-header">
+        <div class="container header-layout">
+            <h1 class="logo">
+                <span aria-hidden="true">⌇</span> prism.<span class="logo-accent">gallery</span>
+            </h1>
+            <!-- nav element for theme toggle (semantic) -->
+            <nav class="theme-nav" aria-label="theme switcher">
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark mode">
+                    <span class="toggle-icon" id="themeIcon" aria-hidden="true">🌙</span>
+                    <span class="toggle-text" id="themeText">Dark</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main content: product gallery section -->
+    <main>
+        <section class="gallery-section" aria-labelledby="gallery-heading">
+            <div class="container">
+                <h2 class="section-heading" id="gallery-heading">featured products</h2>
+                
+                <!-- grid container for cards — semantic <article> per product -->
+                <div class="card-grid" id="cardGrid">
+                    <!-- product 1 -->
+                    <article class="product-card" data-id="1" data-microcopy="Perfect for: commuters, creators, and anyone who wants cinema‑grade sound on the go.">
+                        <div class="card-icon" aria-hidden="true">🎧</div>
+                        <h3 class="product-title">AirPulse Max</h3>
+                        <p class="product-price">$249</p>
+                        <p class="product-description">Wireless over‑ear with spatial audio and 40h battery.</p>
+                        <footer class="card-footer">
+                            <button class="buy-button" type="button" aria-label="learn more about AirPulse Max">
+                                learn more
+                            </button>
+                        </footer>
+                    </article>
+
+                    <!-- product 2 -->
+                    <article class="product-card" data-id="2" data-microcopy="Perfect for: health‑first lifestyles, daily tracking, and staying gently nudged toward your goals.">
+                        <div class="card-icon" aria-hidden="true">⌚</div>
+                        <h3 class="product-title">Chronos SE</h3>
+                        <p class="product-price">$179</p>
+                        <p class="product-description">Fitness tracker with always‑on retina display & GPS.</p>
+                        <footer class="card-footer">
+                            <button class="buy-button" type="button" aria-label="learn more about Chronos SE">
+                                learn more
+                            </button>
+                        </footer>
+                    </article>
+
+                    <!-- product 3 -->
+                    <article class="product-card" data-id="3" data-microcopy="Perfect for: mobile creators, power users, and anyone who lives life in 4K.">
+                        <div class="card-icon" aria-hidden="true">📱</div>
+                        <h3 class="product-title">Photon 15</h3>
+                        <p class="product-price">$899</p>
+                        <p class="product-description">6.7" OLED, 5G, and pro camera system with titanium frame.</p>
+                        <footer class="card-footer">
+                            <button class="buy-button" type="button" aria-label="learn more about Photon 15">
+                                learn more
+                            </button>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- page footer with small note (semantic) -->
+    <footer class="page-footer">
+        <div class="container">
+            <p class="footer-note">hover cards · theme toggle · fade on scroll</p>
+        </div>
+    </footer>
+
+    <!-- product details modal -->
+    <div class="product-modal" id="productModal" aria-hidden="true">
+        <div class="product-modal-backdrop" data-modal-close></div>
+        <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="productModalTitle" tabindex="-1">
+            <button class="modal-close" type="button" aria-label="Close details" data-modal-close>×</button>
+            <h2 class="modal-title" id="productModalTitle"></h2>
+            <p class="modal-price"></p>
+            <p class="modal-description"></p>
+            <p class="modal-extra"></p>
+            <div class="modal-actions">
+                <button class="modal-ghost" type="button" aria-label="Add to wishlist">
+                    Add to wishlist
+                </button>
+                <button class="modal-ghost" type="button" aria-label="Compare later">
+                    Compare later
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>
