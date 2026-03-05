@@ -1,35 +1,35 @@
 /* ===== styles.css ===== */
 /* CSS variables (all color definitions) */
 :root {
-  --bg-body: #f6f1e9;
-  --bg-card: #fdfaf5;
-  --text-main: #1f130c;
-  --text-secondary: #6b5845;
-  --border-light: #e1d3c2;
-  --shadow: 0 26px 60px -32px rgba(15, 10, 5, 0.8);
+  --bg-body: #f3f8ff;
+  --bg-card: #ffffff;
+  --text-main: #071524;
+  --text-secondary: #425f7a;
+  --border-light: #d4e2f5;
+  --shadow: 0 24px 60px -30px rgba(4, 18, 40, 0.65);
   --hover-lift: translateY(-6px);
-  --accent: #d4af37; /* soft gold */
-  --accent-light: #f4e3b2; /* warm highlight */
-  --button-bg: rgba(255, 255, 255, 0.7);
-  --button-icon: #3b2a18;
-  --header-bg: rgba(253, 250, 245, 0.7);
-  --footer-text: #7c6a57;
+  --accent: #0ea5e9; /* electric sky blue */
+  --accent-light: #22c55e; /* sporty lime */
+  --button-bg: rgba(255, 255, 255, 0.9);
+  --button-icon: #05101e;
+  --header-bg: rgba(243, 248, 255, 0.9);
+  --footer-text: #4b647e;
 }
 
 /* dark theme overrides – all colors via variables */
 body.dark {
-  --bg-body: #090806;
-  --bg-card: #15100b;
-  --text-main: #f7f2e9;
-  --text-secondary: #b8a48e;
-  --border-light: #3a2d1f;
-  --shadow: 0 32px 80px -36px rgba(0, 0, 0, 0.95);
-  --accent: #f5d77b;
-  --accent-light: #ffeec0;
-  --button-bg: rgba(21, 16, 11, 0.9);
-  --button-icon: #f5e7cf;
-  --header-bg: rgba(10, 8, 5, 0.9);
-  --footer-text: #a18c73;
+  --bg-body: #020617;
+  --bg-card: #020617;
+  --text-main: #e5f3ff;
+  --text-secondary: #9cb8d8;
+  --border-light: #1f2937;
+  --shadow: 0 32px 80px -34px rgba(0, 0, 0, 0.95);
+  --accent: #38bdf8; /* lighter neon blue */
+  --accent-light: #4ade80; /* bright sporty green */
+  --button-bg: rgba(15, 23, 42, 0.96);
+  --button-icon: #e5f3ff;
+  --header-bg: rgba(15, 23, 42, 0.96);
+  --footer-text: #9cb8d8;
 }
 
 /* RESET + base */
@@ -97,7 +97,7 @@ body {
 }
 
 .theme-toggle {
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), var(--button-bg));
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.98), var(--button-bg));
   border: 1px solid var(--border-light);
   border-radius: 60px;
   padding: 0.6rem 1.4rem;
@@ -114,7 +114,7 @@ body {
 }
 
 .theme-toggle:hover {
-  background: radial-gradient(circle at top left, var(--accent-light), var(--bg-card));
+  background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), var(--bg-card));
   border-color: var(--accent);
   transform: translateY(-2px);
 }
@@ -204,8 +204,8 @@ body {
 /* hover effect */
 .product-card:hover {
   transform: var(--hover-lift);
-  box-shadow: 0 30px 60px -32px rgba(0, 0, 0, 0.9);
-  border-color: rgba(212, 175, 55, 0.65);
+  box-shadow: 0 30px 60px -34px rgba(15, 23, 42, 0.95);
+  border-color: rgba(56, 189, 248, 0.75);
 }
 
 .card-icon {
@@ -249,9 +249,9 @@ body {
 
 .buy-button {
   display: inline-block;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), rgba(250, 240, 220, 0.8));
-  border: 1px solid rgba(212, 175, 55, 0.65);
-  color: #3b2a18;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.98), rgba(224, 242, 254, 0.9));
+  border: 1px solid rgba(56, 189, 248, 0.9);
+  color: #071524;
   font-weight: 600;
   padding: 0.6rem 2rem;
   border-radius: 40px;
@@ -266,7 +266,7 @@ body {
 
 .product-card:hover .buy-button {
   background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  color: #201208;
+  color: #020617;
   transform: translateY(-1px) scale(1.03);
   box-shadow: 0 14px 30px -20px rgba(0, 0, 0, 0.85);
 }
@@ -286,7 +286,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.45), transparent 65%);
+  background: radial-gradient(circle at center, rgba(191, 219, 254, 0.7), transparent 65%);
   opacity: 0.7;
   animation: pulseGlow 1.3s ease-out forwards;
   pointer-events: none;
@@ -324,13 +324,13 @@ body {
 .product-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.92));
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
 }
 
 .product-modal-dialog {
   position: relative;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), rgba(245, 232, 210, 0.04)),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(212, 175, 55, 0.18));
+  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.96)),
+    linear-gradient(145deg, rgba(56, 189, 248, 0.2), rgba(34, 197, 94, 0.18));
   color: var(--text-main);
   border-radius: 1.5rem;
   box-shadow: 0 40px 90px -45px rgba(0, 0, 0, 1);
@@ -341,7 +341,7 @@ body {
   transform: translateY(12px);
   opacity: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  border: 1px solid rgba(244, 227, 178, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.9);
 }
 
 .product-modal.open .product-modal-dialog {
@@ -403,8 +403,8 @@ body {
 .modal-ghost {
   padding: 0.45rem 1.1rem;
   border-radius: 999px;
-  border: 1px solid rgba(225, 211, 194, 0.8);
-  background: rgba(15, 10, 5, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  background: rgba(15, 23, 42, 0.8);
   color: var(--text-secondary);
   font-size: 0.85rem;
   cursor: pointer;
@@ -413,8 +413,8 @@ body {
 
 .modal-ghost:hover {
   border-color: var(--accent);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.16), rgba(244, 227, 178, 0.2));
-  color: #f7f2e9;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.35), rgba(34, 197, 94, 0.3));
+  color: #e5f3ff;
   transform: translateY(-1px);
 }
 
