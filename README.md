@@ -111,5 +111,6 @@ Press `Ctrl + C` in the terminal to stop the server.
 - Add keyboard focus trap within the modal (currently focus is moved in and restored, but not fully trapped).
 - Extract styles into a simple design system (e.g. reusable button and card classes).
 
-For the checkpoint, the current implementation already demonstrates strong HTML/CSS/JS skills, attention to user experience, and thoughtful problem‑solving.
+Author : Bisiriyu Abiola James
+
 
